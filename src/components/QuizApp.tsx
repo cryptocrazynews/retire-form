@@ -355,7 +355,7 @@ export default function QuizApp() {
           {/* Brand Collab Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-500/10 border border-primary-500/20 text-primary-500 text-xs font-bold mb-8">
             <Coins className="w-4 h-4" />
-            <span>白鲸 Beluga App 特约 · 2026 独家财务自测</span>
+            <span>白鲸 BaiJing App 特约 · 2026 独家财务自测</span>
           </div>
 
           {/* Clean Editorial Provocative Headline */}
@@ -695,7 +695,7 @@ export default function QuizApp() {
           </div>
 
           {/* ======================================================== */}
-          {/* 5. CRITICAL CTA BANNER: Beluga App Beluga Logo + Orange UI */}
+          {/* 5. CRITICAL CTA BANNER: BaiJing App BaiJing Logo + Orange UI */}
           {/* ======================================================== */}
           <div className="w-full bg-gradient-to-r from-[#ff6600] via-[#ff7519] to-[#ff8c40] rounded-[2.5rem] p-8 sm:p-12 text-white flex flex-col lg:flex-row items-center justify-between gap-8 shadow-2xl shadow-primary-500/25 relative overflow-hidden group">
             
@@ -704,7 +704,7 @@ export default function QuizApp() {
 
             <div className="flex flex-col md:flex-row items-center md:items-start gap-6 text-center md:text-left max-w-xl z-10">
               
-              {/* Beluga Brand Logo */}
+              {/* BaiJing Brand Logo */}
               <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-3xl overflow-hidden shadow-2xl border-2 border-white/30 flex-shrink-0 group-hover:rotate-3 transition-transform duration-300 bg-white flex items-center justify-center p-1">
                 <img src="/logo.png" alt="白鲸 App Logo" className="w-full h-full object-cover rounded-2xl" />
               </div>
@@ -713,7 +713,7 @@ export default function QuizApp() {
                 
                 <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/20 text-white font-mono text-xs font-extrabold uppercase tracking-widest mb-3 w-fit mx-auto md:mx-0 backdrop-blur-sm">
                   <Zap className="w-3.5 h-3.5 fill-white" />
-                  <span>白鲸 Beluga App 官方推荐</span>
+                  <span>白鲸 BaiJing App 官方推荐</span>
                 </div>
 
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight leading-snug mb-3 text-white">
