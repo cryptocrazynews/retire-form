@@ -10,8 +10,10 @@ import {
   Twitter,
   Copy,
   ExternalLink,
-  Clock,
-  Compass
+  ShieldCheck,
+  Coins,
+  Headphones,
+  Sparkles
 } from 'lucide-react';
 
 // --- TARGET URL ---
@@ -79,13 +81,13 @@ const QUESTIONS: Question[] = [
   },
   {
     id: 5,
-    question: "当听到身边的人狂热讨论「美股」、「ETF」、「比特币」或「资产配置」时，你的状态是？",
+    question: "当听到身边的人狂热讨论「美股」、「ETF」、「比特币」或「指数交易」时，你的状态是？",
     situation: "投资理财观念大会考",
     options: [
       { id: 'A', label: "「曾经跟风乱买被当韭菜割过，现在看到 K 线图就胃痛。」", subtext: "一朝被蛇咬，只敢放银行被通胀侵蚀", points: 4 },
       { id: 'B', label: "「听不懂也不想碰，我觉得投资像赌博，存定期最安全。」", subtext: "极度保守派，资产跑赢通胀难度高", points: 3 },
       { id: 'C', label: "「只买宽基大盘或红利 ETF，设定定期定额后就去睡觉。」", subtext: "聪明懒人投资法，享受市场红利", points: 2 },
-      { id: 'D', label: "「我都有布局！懂得做资产配置与动态调整，自认理财达人。」", subtext: "积极主动，有机会大幅缩短退休时程", points: 1 },
+      { id: 'D', label: "「我都有布局！懂得借助工具做趋势交易，自认理财达人。」", subtext: "积极主动，有机会大幅缩短退休时程", points: 1 },
     ]
   },
   {
@@ -138,7 +140,7 @@ const RESULTS: Record<string, ResultProfile> = {
     xShareText: "实测发现我的退休缺口是 0 元！被认证为『财富自由的凡尔赛大师』🎯 30秒残酷实测，看看你离退休还差多少？",
     diagnosis: "你拥有超凡的财务纪律与极佳的资产配置观念。紧急预备金充足，投资稳健，对生活物欲有着极高的掌控力。上班对你来说只是打发时间或保持社会脱敏的消遣。",
     prescription: [
-      "持续优化资产配置，将重心逐步移往低波动、高稳健的全球型核心资产。",
+      "持续优化资产配置，借助白鲸 App 探索全球核心资产。",
       "留意通胀对现金购买力的长期侵蚀，保持合理的投资成长率（约 5-6% 即可）。",
       "开启人生第二曲线或公益探索，享受真正的精神与财富双重自由。"
     ]
@@ -154,9 +156,9 @@ const RESULTS: Record<string, ResultProfile> = {
     xShareText: "我的退休缺口还差 150 万！被诊断为『准退休贵族』🎯 再加把劲就能提前去海边度假了！30秒真实测算，算算你离退休还有多远！",
     diagnosis: "你的理财基础相当不错，已经建立起初步的被动收入或稳健的储蓄习惯。面对突发状况有一定抵御能力，但距离心中完美、毫无顾忌的退休生活蓝图，还差最后几年的复利雪球滚动。",
     prescription: [
-      "运用『核心-卫星策略』，80% 投入稳健指数基金，20% 捕捉高确定性的行业轮动红利。",
+      "借助白鲸 App 的一站式指数交易，轻松捕捉确定性高的市场轮动红利。",
       "定期检视手边的保单与隐形开销，将多余的闲置资金转化为能生息的资产。",
-      "善用智能定投工具设定『自动逢低加码』，提早 3-5 年达成完全退休目标。"
+      "建立纪律化交易策略，提早 3-5 年达成完全退休目标。"
     ]
   },
   LATTE: {
@@ -171,7 +173,7 @@ const RESULTS: Record<string, ResultProfile> = {
     diagnosis: "你在职场上表现不俗，收入中等偏上，但患有严重的『精致穷』倾向。对一杯几十块的咖啡或昂贵的餐厅毫无抵抗力，导致每个月结余少得可怜，资产积累速度远远赶不上老化的速度。",
     prescription: [
       "奉行『先储蓄/投资，后消费』的铁律！每月发工资当天强制转出 20% 到独立投资账户。",
-      "揪出生活中的『消费拿铁因子』（如用不到的包月会员、频繁的外卖），每月省下 2000 元直接投入大盘。",
+      "借助白鲸 App 开启低门槛的指数定投，把早午餐的钱转变成未来的自由雪球。",
       "建立紧急预备金，避免意外发生时被迫中断现有的生活水准。"
     ]
   },
@@ -186,9 +188,9 @@ const RESULTS: Record<string, ResultProfile> = {
     xShareText: "泪奔……我的退休缺口高达 650 万，获颁『终极打工人』称号 🎯 感觉得在工位干到 75 岁，谁来救救我！快来测测你是不是同道中人！",
     diagnosis: "你深受沉重的房贷、车贷或家庭开销所困，每天像在滚轮上狂奔的仓鼠，不敢停下脚步。对于投资理财充满恐惧或毫无概念，大部分资产要么锁在自住房屋，要么放在利息微薄的银行活期。",
     prescription: [
-      "打破『只有有钱才能投资』的迷思！从每个月 500 块钱小额定期定额开始，建立第一笔会长大的现金流。",
+      "打破『只有有钱才能投资』的迷思！白鲸 App 支持便捷出入金，门槛极低，从今天开始迈出第一步。",
       "积极提升职场核心技能或寻找副业变现机会，突破目前的收入天花板。",
-      "寻求专业的资产负债整合建议，降低不必要的高利息负债（如信用卡最低还款利息或网贷）。"
+      "寻求专业的资产负债整合建议，降低不必要的高利息负债。"
     ]
   },
   JELLYFISH: {
@@ -204,7 +206,7 @@ const RESULTS: Record<string, ResultProfile> = {
     prescription: [
       "【紧急止血】立刻停止任何分期付款与非必要开销，剪掉或冻结会让你过度消费的额度！",
       "【强行储蓄】无论赚多赚少，每个月硬性存下 500 ~ 1000 元作为保命紧急预备金。",
-      "【建立防线】当预备金满 3 个月后，全面导入低门槛的智能自动化理财工具，让系统帮你克服人性弱点。"
+      "【建立防线】当预备金满 3 个月后，通过白鲸 App 等专业一站式工具进行稳健的指数布局，让系统帮你克服人性弱点。"
     ]
   }
 };
@@ -225,7 +227,7 @@ export default function QuizApp() {
     "调阅近一年外卖与消费账单……",
     "计算通胀对购买力的吞噬速率……",
     "分析老年医疗与基础生活开销……",
-    "生成专属破局指南与财务报告……"
+    "匹配白鲸智能交易破局模型……"
   ];
 
   // Result matching
@@ -289,7 +291,7 @@ export default function QuizApp() {
                 particleCount: 100,
                 spread: 70,
                 origin: { y: 0.6 },
-                colors: ['#10b981', '#34d399', '#6ee7b7', '#ffffff']
+                colors: ['#ff6600', '#ff8a4c', '#ffd6bb', '#ffffff']
               });
             }, 200);
             return prev;
@@ -350,33 +352,34 @@ export default function QuizApp() {
       {step === 'hero' && (
         <section className="w-full max-w-3xl flex flex-col items-center text-center animate-fadeIn my-auto">
           
-          {/* Subtle Clean Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface border border-border text-slate-300 text-xs font-medium mb-8">
-            <Clock className="w-3.5 h-3.5 text-primary-500" />
-            <span>只需要 30 秒 · 全程匿名测算</span>
+          {/* Brand Collab Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-500/10 border border-primary-500/20 text-primary-500 text-xs font-bold mb-8">
+            <Coins className="w-4 h-4" />
+            <span>白鲸 Beluga App 特约 · 2026 独家财务自测</span>
           </div>
 
           {/* Clean Editorial Provocative Headline */}
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.2] text-white mb-6">
-            你以为 <span className="text-primary-500">65 岁</span>能顺利退休，但查完余额……<span className="underline decoration-primary-500/50 decoration-2">你确定不是在开玩笑？</span>
+            你以为 <span className="text-primary-500 underline decoration-primary-500/40 decoration-wavy">65 岁</span>能顺利退休，但查完余额……你确定不是在开玩笑？
           </h1>
 
           {/* Subtitle */}
           <p className="text-base sm:text-lg text-slate-400 leading-relaxed mb-10 max-w-2xl font-normal">
-            7 道直击打工人痛点的真实自测，精准诊断你的<strong className="text-white font-semibold">真实退休缺口</strong>，并获取为你定制的破局指南。
+            7 道直击打工人痛点的真实自测，只需 30 秒，精准诊断你的<strong className="text-white font-semibold">真实退休缺口</strong>，并获取白鲸独家定制破局指南。
           </p>
 
           {/* CTA Button */}
           <button
             onClick={handleStart}
-            className="w-full sm:w-auto min-w-[260px] px-8 py-4 rounded-xl bg-primary-500 hover:bg-primary-600 active:scale-98 text-white font-bold text-base sm:text-lg transition-all shadow-lg shadow-primary-500/25 flex items-center justify-center gap-2 group cursor-pointer"
+            className="w-full sm:w-auto min-w-[280px] px-8 py-5 rounded-2xl bg-primary-500 hover:bg-primary-600 active:scale-98 text-white font-black text-lg sm:text-xl transition-all shadow-xl shadow-primary-500/30 flex items-center justify-center gap-3 group cursor-pointer"
           >
-            <span>⚡ 开始测算我的退休缺口</span>
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <Zap className="w-6 h-6 fill-white" />
+            <span>开始测算我的退休缺口</span>
+            <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
           </button>
 
           {/* Real user hint */}
-          <div className="mt-12 pt-8 border-t border-border w-full grid grid-cols-2 sm:grid-cols-3 gap-6 text-left text-xs sm:text-sm text-slate-400">
+          <div className="mt-16 pt-8 border-t border-border w-full grid grid-cols-2 sm:grid-cols-3 gap-6 text-left text-xs sm:text-sm text-slate-400">
             <div className="flex items-center gap-2.5">
               <span className="w-2 h-2 rounded-full bg-primary-500"></span>
               <span><strong>38,421+</strong> 人已测算</span>
@@ -385,8 +388,8 @@ export default function QuizApp() {
               <span className="w-2 h-2 rounded-full bg-primary-500"></span>
               <span><strong>5 大</strong> 专属人格标签</span>
             </div>
-            <div className="col-span-2 sm:col-span-1 flex items-center justify-center sm:justify-start gap-2.5 text-slate-300">
-              <span>🎁 测完即领 <strong>$500</strong> 体验金</span>
+            <div className="col-span-2 sm:col-span-1 flex items-center justify-center sm:justify-start gap-2.5 text-primary-400 font-semibold">
+              <span>🎁 注册最高领 50% 赠金</span>
             </div>
           </div>
 
@@ -407,16 +410,16 @@ export default function QuizApp() {
             </span>
           </div>
 
-          <div className="w-full h-1.5 bg-surface rounded-full overflow-hidden mb-8">
+          <div className="w-full h-2 bg-surface rounded-full overflow-hidden mb-8 border border-border p-0.5">
             <div 
-              className="h-full bg-primary-500 rounded-full transition-all duration-300 ease-out"
+              className="h-full bg-primary-500 rounded-full transition-all duration-300 ease-out shadow-sm shadow-primary-500/50"
               style={{ width: `${((currentQuestionIdx + 1) / QUESTIONS.length) * 100}%` }}
             ></div>
           </div>
 
           {/* Question Box */}
-          <div className="mb-8">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white leading-snug tracking-tight">
+          <div className="mb-8 bg-surface border border-border rounded-3xl p-6 sm:p-8 shadow-lg">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white leading-snug tracking-tight">
               {q.question}
             </h2>
           </div>
@@ -429,18 +432,18 @@ export default function QuizApp() {
                 <button
                   key={opt.id}
                   onClick={() => handleOptionSelect(opt.points)}
-                  className="w-full text-left p-5 sm:p-6 rounded-xl bg-surface hover:bg-surface-hover border border-border hover:border-primary-500/50 transition-all flex items-start gap-4 group cursor-pointer active:scale-[0.99]"
+                  className="w-full text-left p-5 sm:p-6 rounded-2xl bg-surface hover:bg-surface-hover border border-border hover:border-primary-500/50 transition-all flex items-start gap-4 group cursor-pointer active:scale-[0.99] shadow-sm hover:shadow-md"
                 >
-                  <span className="w-8 h-8 rounded-lg bg-card group-hover:bg-primary-500 group-hover:text-white text-slate-400 font-mono font-bold flex items-center justify-center flex-shrink-0 transition-colors text-xs sm:text-sm mt-0.5">
+                  <span className="w-9 h-9 rounded-xl bg-card group-hover:bg-primary-500 group-hover:text-white text-slate-400 font-mono font-black flex items-center justify-center flex-shrink-0 transition-colors text-sm sm:text-base mt-0.5 shadow-inner">
                     {letters[idx]}
                   </span>
-                  <div className="flex flex-col">
-                    <span className="text-sm sm:text-base font-medium text-slate-200 group-hover:text-white transition-colors leading-relaxed">
+                  <div className="flex flex-col justify-center">
+                    <span className="text-sm sm:text-base font-bold text-slate-200 group-hover:text-white transition-colors leading-relaxed">
                       {opt.label}
                     </span>
                     {opt.subtext && (
-                      <span className="text-xs text-slate-500 mt-1.5">
-                        {opt.subtext}
+                      <span className="text-xs text-slate-500 mt-1">
+                        💡 {opt.subtext}
                       </span>
                     )}
                   </div>
@@ -458,9 +461,9 @@ export default function QuizApp() {
       {step === 'calculating' && (
         <section className="w-full max-w-md my-auto flex flex-col items-center justify-center text-center p-8 animate-fadeIn">
           
-          <div className="relative w-24 h-24 mb-8 flex items-center justify-center">
-            <div className="absolute inset-0 rounded-full border-2 border-border border-t-primary-500 animate-spin"></div>
-            <Compass className="w-10 h-10 text-primary-500 animate-pulse" />
+          <div className="relative w-28 h-28 mb-8 flex items-center justify-center">
+            <div className="absolute inset-0 rounded-full border-4 border-surface border-t-primary-500 animate-spin"></div>
+            <img src="/logo.png" alt="白鲸 App" className="w-12 h-12 rounded-xl object-cover animate-pulse" />
           </div>
 
           <h2 className="text-xl font-bold text-white mb-3 tracking-tight">
@@ -468,12 +471,12 @@ export default function QuizApp() {
           </h2>
           
           <div className="h-8 flex items-center justify-center">
-            <p className="text-primary-500 text-xs sm:text-sm font-medium animate-pulse">
-              {calcMessages[calcStep]}
+            <p className="text-primary-500 text-xs sm:text-sm font-semibold animate-pulse">
+              ⚡ {calcMessages[calcStep]}
             </p>
           </div>
 
-          <div className="w-full bg-surface h-1 rounded-full mt-6 overflow-hidden">
+          <div className="w-full bg-surface h-1.5 rounded-full mt-6 overflow-hidden border border-border">
             <div 
               className="bg-primary-500 h-full transition-all duration-300"
               style={{ width: `${((calcStep + 1) / calcMessages.length) * 100}%` }}
@@ -493,7 +496,7 @@ export default function QuizApp() {
           <div className="w-full flex items-center justify-between mb-6">
             <button
               onClick={handleStart}
-              className="inline-flex items-center gap-1.5 text-xs font-medium text-slate-400 hover:text-white transition-colors cursor-pointer bg-surface px-3.5 py-2 rounded-lg border border-border"
+              className="inline-flex items-center gap-2 text-xs font-bold text-slate-400 hover:text-white transition-colors cursor-pointer bg-surface px-4 py-2 rounded-xl border border-border shadow-sm"
             >
               <RefreshCw className="w-3.5 h-3.5" />
               <span>重新测算</span>
@@ -502,15 +505,15 @@ export default function QuizApp() {
             <div className="flex items-center gap-2">
               <button
                 onClick={handleXShare}
-                className="inline-flex items-center gap-1.5 text-xs font-semibold text-white bg-[#1DA1F2] hover:bg-[#1a8cd8] px-3.5 py-2 rounded-lg transition-colors cursor-pointer"
+                className="inline-flex items-center gap-1.5 text-xs font-extrabold text-white bg-[#1DA1F2] hover:bg-[#1a8cd8] px-4 py-2 rounded-xl transition-all shadow-md shadow-[#1DA1F2]/20 cursor-pointer"
               >
                 <Twitter className="w-3.5 h-3.5 fill-current" />
-                <span>分享至 X</span>
+                <span>一键分享至 X</span>
               </button>
 
               <button
                 onClick={handleCopy}
-                className="inline-flex items-center gap-1.5 text-xs font-medium text-slate-300 bg-surface hover:bg-surface-hover px-3.5 py-2 rounded-lg border border-border transition-colors cursor-pointer"
+                className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-200 bg-surface hover:bg-surface-hover px-4 py-2 rounded-xl border border-border transition-all cursor-pointer shadow-sm"
               >
                 <Copy className="w-3.5 h-3.5" />
                 <span>{copied ? '复制成功！' : '复制文案'}</span>
@@ -519,35 +522,35 @@ export default function QuizApp() {
           </div>
 
           {/* Main Professional Result Card */}
-          <div className="w-full bg-surface border border-border rounded-3xl p-6 sm:p-10 shadow-xl mb-10 relative overflow-hidden">
+          <div className="w-full bg-surface border-2 border-border rounded-[2.5rem] p-6 sm:p-10 shadow-2xl mb-10 relative overflow-hidden">
             
             {/* Minimal Background corner decoration */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-primary-500/5 rounded-bl-full pointer-events-none"></div>
+            <div className="absolute top-0 right-0 w-48 h-48 bg-primary-500/5 rounded-bl-full pointer-events-none blur-xl"></div>
 
             <div className="flex flex-col md:flex-row items-start justify-between gap-8 pb-8 border-b border-border">
               
               <div className="flex flex-col gap-2">
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-500/10 text-primary-500 border border-primary-500/20 text-xs font-semibold w-fit">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-500/10 text-primary-500 border border-primary-500/20 text-xs font-bold w-fit">
                   <Award className="w-3.5 h-3.5" />
                   <span>专属退休人格标签</span>
                 </div>
-                <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight">
+                <h1 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
                   {resultData.title}
                 </h1>
-                <p className="text-sm sm:text-base text-slate-400 mt-1">
+                <p className="text-sm sm:text-base text-slate-400 mt-1 font-medium">
                   {resultData.subtitle}
                 </p>
               </div>
 
               {/* Big Data Callout */}
-              <div className="bg-card border border-border p-5 rounded-2xl flex flex-col min-w-[200px] flex-shrink-0">
-                <span className="text-xs text-slate-500 font-medium mb-1">测算退休缺口金额</span>
+              <div className="bg-card border border-border p-6 rounded-3xl flex flex-col min-w-[220px] flex-shrink-0 shadow-inner">
+                <span className="text-xs text-slate-500 font-semibold uppercase tracking-wider mb-1">测算退休缺口金额</span>
                 <span className="text-3xl sm:text-4xl font-black text-primary-500 tracking-tight font-mono">
                   {resultData.gapText}
                 </span>
-                <div className="flex items-center gap-2 mt-2 pt-2 border-t border-border/60 text-xs text-slate-400">
+                <div className="flex items-center gap-2 mt-3 pt-3 border-t border-border/80 text-xs text-slate-400 font-medium">
                   <span>生存难度：</span>
-                  <span className="text-white font-semibold">{resultData.difficulty}</span>
+                  <span className="text-white font-bold">{resultData.difficulty}</span>
                 </div>
               </div>
 
@@ -557,35 +560,35 @@ export default function QuizApp() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
               
               {/* Reality Analysis */}
-              <div className="bg-card/50 border border-border/80 rounded-2xl p-6 flex flex-col justify-between">
+              <div className="bg-card/50 border border-border rounded-2xl p-6 flex flex-col justify-between">
                 <div>
-                  <div className="flex items-center gap-2 text-slate-300 font-bold text-sm mb-3">
+                  <div className="flex items-center gap-2 text-slate-200 font-extrabold text-sm mb-3">
                     <AlertTriangle className="w-4 h-4 text-amber-500" />
                     <span>现实剖析</span>
                   </div>
-                  <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                  <p className="text-slate-400 text-xs sm:text-sm leading-relaxed font-normal">
                     {resultData.diagnosis}
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-border/80 flex items-center justify-between text-xs text-slate-400">
+                <div className="mt-6 pt-4 border-t border-border flex items-center justify-between text-xs text-slate-400 font-medium">
                   <span>照现状预期退休年龄：</span>
-                  <span className="text-base font-bold text-white">
+                  <span className="text-base font-black text-white font-mono">
                     {resultData.projectedRetireAge > 80 ? '一辈子打工 💀' : `${resultData.projectedRetireAge} 岁`}
                   </span>
                 </div>
               </div>
 
               {/* Action Plan */}
-              <div className="bg-card/50 border border-border/80 rounded-2xl p-6">
-                <div className="flex items-center gap-2 text-slate-300 font-bold text-sm mb-3">
+              <div className="bg-card/50 border border-border rounded-2xl p-6">
+                <div className="flex items-center gap-2 text-slate-200 font-extrabold text-sm mb-3">
                   <TrendingUp className="w-4 h-4 text-primary-500" />
-                  <span>专属破局指南</span>
+                  <span>白鲸专属破局指南</span>
                 </div>
                 <ul className="space-y-3">
                   {resultData.prescription.map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-400 leading-relaxed">
-                      <span className="w-4 h-4 rounded bg-primary-500/10 text-primary-500 flex items-center justify-center flex-shrink-0 font-mono text-[10px] font-bold mt-0.5">
+                    <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
+                      <span className="w-5 h-5 rounded bg-primary-500/10 text-primary-500 border border-primary-500/20 flex items-center justify-center flex-shrink-0 font-mono text-[10px] font-black mt-0.5">
                         {idx + 1}
                       </span>
                       <span>{item}</span>
@@ -601,22 +604,22 @@ export default function QuizApp() {
           {/* ======================================================== */}
           {/* INTERACTIVE BONUS SLIDER */}
           {/* ======================================================== */}
-          <div className="w-full bg-surface border border-border rounded-3xl p-6 sm:p-8 mb-10 shadow-lg">
+          <div className="w-full bg-surface border border-border rounded-3xl p-6 sm:p-8 mb-10 shadow-xl">
             <div className="flex items-center justify-between mb-6 flex-wrap gap-2">
               <div className="flex items-center gap-2.5">
-                <div className="w-7 h-7 rounded-lg bg-primary-500/10 text-primary-500 flex items-center justify-center">
-                  <TrendingUp className="w-4 h-4" />
+                <div className="w-8 h-8 rounded-xl bg-primary-500/10 text-primary-500 flex items-center justify-center font-black">
+                  🛠️
                 </div>
-                <h3 className="text-base sm:text-lg font-bold text-white tracking-tight">
-                  推演未来：如果现在开始智能定投，能扭转多少缺口？
+                <h3 className="text-base sm:text-lg font-black text-white tracking-tight">
+                  推演未来：如果借助白鲸 App 开启定投，能扭转多少缺口？
                 </h3>
               </div>
-              <span className="text-xs text-slate-500">拖拉滑杆即时试算</span>
+              <span className="text-xs text-slate-500 font-medium">拖拉滑杆即时试算</span>
             </div>
 
             {resultData.gapAmount === 0 ? (
-              <div className="text-center py-6 text-slate-400 text-sm">
-                🎉 你已经没有任何缺口！开启智能配置，让资产穿越周期，稳健传续。
+              <div className="text-center py-6 text-slate-400 text-sm font-bold">
+                🎉 你已经没有任何缺口！下载白鲸 App，体验极速一站式指数交易，让资产稳健增长。
               </div>
             ) : (
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
@@ -625,9 +628,9 @@ export default function QuizApp() {
                 <div className="lg:col-span-2 space-y-6">
                   
                   <div>
-                    <div className="flex justify-between text-xs sm:text-sm font-medium mb-2.5">
-                      <span className="text-slate-300">每月设定定投金额：</span>
-                      <span className="text-primary-500 font-mono font-bold">¥ {extraSave.toLocaleString()} / 月</span>
+                    <div className="flex justify-between text-xs sm:text-sm font-bold mb-2.5">
+                      <span className="text-slate-300">每月在白鲸设定定投金额：</span>
+                      <span className="text-primary-500 font-mono font-extrabold text-base">¥ {extraSave.toLocaleString()} / 月</span>
                     </div>
                     <input 
                       type="range" 
@@ -636,9 +639,9 @@ export default function QuizApp() {
                       step="500" 
                       value={extraSave}
                       onChange={(e) => setExtraSave(Number(e.target.value))}
-                      className="w-full h-2 bg-card rounded-lg appearance-none cursor-pointer accent-primary-500"
+                      className="w-full h-2.5 bg-card rounded-lg appearance-none cursor-pointer accent-primary-500"
                     />
-                    <div className="flex justify-between text-[10px] text-slate-500 font-mono mt-1.5">
+                    <div className="flex justify-between text-[10px] text-slate-500 font-mono mt-1.5 font-bold">
                       <span>¥500</span>
                       <span>¥7,500</span>
                       <span>¥15,000</span>
@@ -646,9 +649,9 @@ export default function QuizApp() {
                   </div>
 
                   <div>
-                    <div className="flex justify-between text-xs sm:text-sm font-medium mb-2.5">
+                    <div className="flex justify-between text-xs sm:text-sm font-bold mb-2.5">
                       <span className="text-slate-300">使用智能策略提升年化收益率：</span>
-                      <span className="text-white font-mono font-bold">+{extraReturn}%</span>
+                      <span className="text-white font-mono font-extrabold text-base">+{extraReturn}%</span>
                     </div>
                     <input 
                       type="range" 
@@ -657,9 +660,9 @@ export default function QuizApp() {
                       step="1" 
                       value={extraReturn}
                       onChange={(e) => setExtraReturn(Number(e.target.value))}
-                      className="w-full h-2 bg-card rounded-lg appearance-none cursor-pointer accent-primary-500"
+                      className="w-full h-2.5 bg-card rounded-lg appearance-none cursor-pointer accent-primary-500"
                     />
-                    <div className="flex justify-between text-[10px] text-slate-500 font-mono mt-1.5">
+                    <div className="flex justify-between text-[10px] text-slate-500 font-mono mt-1.5 font-bold">
                       <span>保守 (+1%)</span>
                       <span>稳健 (+4%)</span>
                       <span>积极 (+8%)</span>
@@ -669,20 +672,21 @@ export default function QuizApp() {
                 </div>
 
                 {/* Trial Result Output */}
-                <div className="bg-card border border-border rounded-2xl p-6 flex flex-col justify-center items-center text-center">
-                  <span className="text-xs text-slate-500 font-medium mb-1">调整后的新退休缺口</span>
+                <div className="bg-card border border-border rounded-3xl p-6 flex flex-col justify-center items-center text-center shadow-inner">
+                  <span className="text-xs text-slate-500 font-bold mb-1">调整后的新退休缺口</span>
                   <span className="text-2xl sm:text-3xl font-black text-primary-500 tracking-tight font-mono mb-3">
                     ¥ {adjustedGap.toLocaleString()}
                   </span>
                   
                   {yearsSaved > 0 && (
-                    <div className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-primary-500/10 text-primary-500 border border-primary-500/20 text-xs font-semibold">
-                      <span>🚀 可提前 {yearsSaved} 年退休</span>
+                    <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary-500/10 text-primary-500 border border-primary-500/20 text-xs font-black animate-pulse">
+                      <Sparkles className="w-3.5 h-3.5" />
+                      <span>可提前 {yearsSaved} 年退休！</span>
                     </div>
                   )}
 
                   <span className="text-[10px] text-slate-500 mt-3 leading-relaxed">
-                    *基于智能定投 15 年复利模型估算，实际依市场而定。
+                    *基于白鲸智能交易 15 年复利模型估算，实际依市场而定。
                   </span>
                 </div>
 
@@ -691,39 +695,69 @@ export default function QuizApp() {
           </div>
 
           {/* ======================================================== */}
-          {/* 5. DOWNLOAD CTA CARD (Clean, Professional High Conversion Card) */}
+          {/* 5. CRITICAL CTA BANNER: Beluga App Beluga Logo + Orange UI */}
           {/* ======================================================== */}
-          <div className="w-full bg-gradient-to-br from-primary-500 to-primary-600 rounded-3xl p-8 sm:p-12 text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl relative overflow-hidden">
+          <div className="w-full bg-gradient-to-r from-[#ff6600] via-[#ff7519] to-[#ff8c40] rounded-[2.5rem] p-8 sm:p-12 text-white flex flex-col lg:flex-row items-center justify-between gap-8 shadow-2xl shadow-primary-500/25 relative overflow-hidden group">
             
-            <div className="absolute -right-16 -bottom-16 w-64 h-64 bg-white/10 rounded-full blur-3xl pointer-events-none"></div>
+            {/* Background glow & watermark */}
+            <div className="absolute -right-20 -bottom-20 w-80 h-80 bg-white/10 rounded-full blur-3xl pointer-events-none group-hover:scale-125 transition-transform duration-700"></div>
 
-            <div className="flex flex-col text-center md:text-left max-w-lg z-10">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/15 text-white font-mono text-xs font-bold uppercase tracking-wider mb-3 w-fit mx-auto md:mx-0">
-                <Zap className="w-3.5 h-3.5 fill-white" />
-                <span>限时新人福利</span>
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-6 text-center md:text-left max-w-xl z-10">
+              
+              {/* Beluga Brand Logo */}
+              <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-3xl overflow-hidden shadow-2xl border-2 border-white/30 flex-shrink-0 group-hover:rotate-3 transition-transform duration-300 bg-white flex items-center justify-center p-1">
+                <img src="/logo.png" alt="白鲸 App Logo" className="w-full h-full object-cover rounded-2xl" />
               </div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight leading-tight mb-3">
-                下载 App 领 <strong className="underline decoration-white decoration-3">$500 体验金</strong>，挑战提前退休。
-              </h2>
-              <p className="text-primary-50 text-xs sm:text-sm leading-relaxed">
-                别让退休缺口永远只是吓人的数字。立即开启智能机器人配置与自动化定投，告别死工资，首次入金额外送 <strong className="bg-white text-primary-600 px-1.5 py-0.5 rounded font-mono font-bold">8.8%</strong> 收益加码券。
-              </p>
+
+              <div className="flex flex-col justify-center">
+                
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/20 text-white font-mono text-xs font-extrabold uppercase tracking-widest mb-3 w-fit mx-auto md:mx-0 backdrop-blur-sm">
+                  <Zap className="w-3.5 h-3.5 fill-white" />
+                  <span>白鲸 Beluga App 官方推荐</span>
+                </div>
+
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight leading-snug mb-3 text-white">
+                  下载白鲸 App 体验一站式指数交易，<span className="underline decoration-black decoration-4">本周注册还送最高 50% 赠金返现</span>
+                </h2>
+
+                <p className="text-primary-50 font-bold text-xs sm:text-sm leading-relaxed opacity-95">
+                  支持银行卡快速出入金，支持 USDT 便捷入金，24 小时客服在线支援！打破死工资，找回人生财务自由主导权。
+                </p>
+
+                {/* Feature Tags */}
+                <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 mt-4 pt-4 border-t border-white/20 text-[11px] font-black text-white">
+                  <span className="flex items-center gap-1 bg-black/15 px-2.5 py-1 rounded-lg">
+                    <ShieldCheck className="w-3.5 h-3.5 text-white" />
+                    <span>极速出入金</span>
+                  </span>
+                  <span className="flex items-center gap-1 bg-black/15 px-2.5 py-1 rounded-lg">
+                    <Coins className="w-3.5 h-3.5 text-white" />
+                    <span>USDT 零门槛</span>
+                  </span>
+                  <span className="flex items-center gap-1 bg-black/15 px-2.5 py-1 rounded-lg">
+                    <Headphones className="w-3.5 h-3.5 text-white" />
+                    <span>24/7 在线客服</span>
+                  </span>
+                </div>
+
+              </div>
             </div>
 
-            <div className="flex flex-col gap-3 w-full md:w-auto z-10 flex-shrink-0">
+            {/* Action CTA Button */}
+            <div className="flex flex-col gap-3 w-full lg:w-auto z-10 flex-shrink-0">
               
               <a 
                 href={TARGET_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="px-8 py-4 rounded-xl bg-background hover:bg-black active:scale-95 text-white font-bold text-sm flex items-center justify-center gap-2.5 transition-all shadow-lg text-center cursor-pointer group"
+                className="w-full lg:w-auto min-w-[240px] px-8 py-5 rounded-2xl bg-black hover:bg-slate-900 active:scale-95 text-white font-black text-base sm:text-lg flex items-center justify-center gap-3 transition-all shadow-2xl text-center cursor-pointer group hover:ring-4 hover:ring-white/30"
               >
-                <span>立即下载领赠金</span>
-                <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 transition-transform text-primary-400" />
+                <span>🚀 领取 50% 新人赠金</span>
+                <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform text-primary-400" />
               </a>
 
-              <span className="text-[11px] text-primary-100 font-medium text-center">
-                ⭐ 穿越周期 · 稳健传承
+              <span className="text-[11px] text-white font-black text-center tracking-wider">
+                ⭐ 双平台 4.9 星极高评价
               </span>
 
             </div>
