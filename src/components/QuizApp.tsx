@@ -2,9 +2,7 @@ import { useState, useEffect } from 'react';
 import confetti from 'canvas-confetti';
 import { 
   RefreshCw, 
-  Sparkles, 
   ArrowRight, 
-  CheckCircle2, 
   TrendingUp, 
   Award, 
   AlertTriangle,
@@ -12,8 +10,6 @@ import {
   Twitter,
   Copy,
   ExternalLink,
-  ChevronRight,
-  HelpCircle,
   Clock,
   Compass
 } from 'lucide-react';
@@ -605,33 +601,33 @@ export default function QuizApp() {
           {/* ======================================================== */}
           {/* INTERACTIVE BONUS SLIDER */}
           {/* ======================================================== */}
-          <div class="w-full bg-surface border border-border rounded-3xl p-6 sm:p-8 mb-10 shadow-lg">
-            <div class="flex items-center justify-between mb-6 flex-wrap gap-2">
-              <div class="flex items-center gap-2.5">
-                <div class="w-7 h-7 rounded-lg bg-primary-500/10 text-primary-500 flex items-center justify-center">
-                  <TrendingUp class="w-4 h-4" />
+          <div className="w-full bg-surface border border-border rounded-3xl p-6 sm:p-8 mb-10 shadow-lg">
+            <div className="flex items-center justify-between mb-6 flex-wrap gap-2">
+              <div className="flex items-center gap-2.5">
+                <div className="w-7 h-7 rounded-lg bg-primary-500/10 text-primary-500 flex items-center justify-center">
+                  <TrendingUp className="w-4 h-4" />
                 </div>
-                <h3 class="text-base sm:text-lg font-bold text-white tracking-tight">
+                <h3 className="text-base sm:text-lg font-bold text-white tracking-tight">
                   推演未来：如果现在开始智能定投，能扭转多少缺口？
                 </h3>
               </div>
-              <span class="text-xs text-slate-500">拖拉滑杆即时试算</span>
+              <span className="text-xs text-slate-500">拖拉滑杆即时试算</span>
             </div>
 
             {resultData.gapAmount === 0 ? (
-              <div class="text-center py-6 text-slate-400 text-sm">
+              <div className="text-center py-6 text-slate-400 text-sm">
                 🎉 你已经没有任何缺口！开启智能配置，让资产穿越周期，稳健传续。
               </div>
             ) : (
-              <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
                 
                 {/* Sliders */}
-                <div class="lg:col-span-2 space-y-6">
+                <div className="lg:col-span-2 space-y-6">
                   
                   <div>
-                    <div class="flex justify-between text-xs sm:text-sm font-medium mb-2.5">
-                      <span class="text-slate-300">每月设定定投金额：</span>
-                      <span class="text-primary-500 font-mono font-bold">¥ {extraSave.toLocaleString()} / 月</span>
+                    <div className="flex justify-between text-xs sm:text-sm font-medium mb-2.5">
+                      <span className="text-slate-300">每月设定定投金额：</span>
+                      <span className="text-primary-500 font-mono font-bold">¥ {extraSave.toLocaleString()} / 月</span>
                     </div>
                     <input 
                       type="range" 
@@ -640,9 +636,9 @@ export default function QuizApp() {
                       step="500" 
                       value={extraSave}
                       onChange={(e) => setExtraSave(Number(e.target.value))}
-                      class="w-full h-2 bg-card rounded-lg appearance-none cursor-pointer accent-primary-500"
+                      className="w-full h-2 bg-card rounded-lg appearance-none cursor-pointer accent-primary-500"
                     />
-                    <div class="flex justify-between text-[10px] text-slate-500 font-mono mt-1.5">
+                    <div className="flex justify-between text-[10px] text-slate-500 font-mono mt-1.5">
                       <span>¥500</span>
                       <span>¥7,500</span>
                       <span>¥15,000</span>
@@ -650,9 +646,9 @@ export default function QuizApp() {
                   </div>
 
                   <div>
-                    <div class="flex justify-between text-xs sm:text-sm font-medium mb-2.5">
-                      <span class="text-slate-300">使用智能策略提升年化收益率：</span>
-                      <span class="text-white font-mono font-bold">+{extraReturn}%</span>
+                    <div className="flex justify-between text-xs sm:text-sm font-medium mb-2.5">
+                      <span className="text-slate-300">使用智能策略提升年化收益率：</span>
+                      <span className="text-white font-mono font-bold">+{extraReturn}%</span>
                     </div>
                     <input 
                       type="range" 
@@ -661,9 +657,9 @@ export default function QuizApp() {
                       step="1" 
                       value={extraReturn}
                       onChange={(e) => setExtraReturn(Number(e.target.value))}
-                      class="w-full h-2 bg-card rounded-lg appearance-none cursor-pointer accent-primary-500"
+                      className="w-full h-2 bg-card rounded-lg appearance-none cursor-pointer accent-primary-500"
                     />
-                    <div class="flex justify-between text-[10px] text-slate-500 font-mono mt-1.5">
+                    <div className="flex justify-between text-[10px] text-slate-500 font-mono mt-1.5">
                       <span>保守 (+1%)</span>
                       <span>稳健 (+4%)</span>
                       <span>积极 (+8%)</span>
@@ -673,19 +669,19 @@ export default function QuizApp() {
                 </div>
 
                 {/* Trial Result Output */}
-                <div class="bg-card border border-border rounded-2xl p-6 flex flex-col justify-center items-center text-center">
-                  <span class="text-xs text-slate-500 font-medium mb-1">调整后的新退休缺口</span>
-                  <span class="text-2xl sm:text-3xl font-black text-primary-500 tracking-tight font-mono mb-3">
+                <div className="bg-card border border-border rounded-2xl p-6 flex flex-col justify-center items-center text-center">
+                  <span className="text-xs text-slate-500 font-medium mb-1">调整后的新退休缺口</span>
+                  <span className="text-2xl sm:text-3xl font-black text-primary-500 tracking-tight font-mono mb-3">
                     ¥ {adjustedGap.toLocaleString()}
                   </span>
                   
                   {yearsSaved > 0 && (
-                    <div class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-primary-500/10 text-primary-500 border border-primary-500/20 text-xs font-semibold">
+                    <div className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-primary-500/10 text-primary-500 border border-primary-500/20 text-xs font-semibold">
                       <span>🚀 可提前 {yearsSaved} 年退休</span>
                     </div>
                   )}
 
-                  <span class="text-[10px] text-slate-500 mt-3 leading-relaxed">
+                  <span className="text-[10px] text-slate-500 mt-3 leading-relaxed">
                     *基于智能定投 15 年复利模型估算，实际依市场而定。
                   </span>
                 </div>
@@ -697,36 +693,36 @@ export default function QuizApp() {
           {/* ======================================================== */}
           {/* 5. DOWNLOAD CTA CARD (Clean, Professional High Conversion Card) */}
           {/* ======================================================== */}
-          <div class="w-full bg-gradient-to-br from-primary-500 to-primary-600 rounded-3xl p-8 sm:p-12 text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl relative overflow-hidden">
+          <div className="w-full bg-gradient-to-br from-primary-500 to-primary-600 rounded-3xl p-8 sm:p-12 text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl relative overflow-hidden">
             
-            <div class="absolute -right-16 -bottom-16 w-64 h-64 bg-white/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div className="absolute -right-16 -bottom-16 w-64 h-64 bg-white/10 rounded-full blur-3xl pointer-events-none"></div>
 
-            <div class="flex flex-col text-center md:text-left max-w-lg z-10">
-              <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/15 text-white font-mono text-xs font-bold uppercase tracking-wider mb-3 w-fit mx-auto md:mx-0">
-                <Zap class="w-3.5 h-3.5 fill-white" />
+            <div className="flex flex-col text-center md:text-left max-w-lg z-10">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/15 text-white font-mono text-xs font-bold uppercase tracking-wider mb-3 w-fit mx-auto md:mx-0">
+                <Zap className="w-3.5 h-3.5 fill-white" />
                 <span>限时新人福利</span>
               </div>
-              <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight leading-tight mb-3">
-                下载 App 领 <strong class="underline decoration-white decoration-3">$500 体验金</strong>，挑战提前退休。
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight leading-tight mb-3">
+                下载 App 领 <strong className="underline decoration-white decoration-3">$500 体验金</strong>，挑战提前退休。
               </h2>
-              <p class="text-primary-50 text-xs sm:text-sm leading-relaxed">
-                别让退休缺口永远只是吓人的数字。立即开启智能机器人配置与自动化定投，告别死工资，首次入金额外送 <strong class="bg-white text-primary-600 px-1.5 py-0.5 rounded font-mono font-bold">8.8%</strong> 收益加码券。
+              <p className="text-primary-50 text-xs sm:text-sm leading-relaxed">
+                别让退休缺口永远只是吓人的数字。立即开启智能机器人配置与自动化定投，告别死工资，首次入金额外送 <strong className="bg-white text-primary-600 px-1.5 py-0.5 rounded font-mono font-bold">8.8%</strong> 收益加码券。
               </p>
             </div>
 
-            <div class="flex flex-col gap-3 w-full md:w-auto z-10 flex-shrink-0">
+            <div className="flex flex-col gap-3 w-full md:w-auto z-10 flex-shrink-0">
               
               <a 
                 href={TARGET_URL}
                 target="_blank"
                 rel="noreferrer"
-                class="px-8 py-4 rounded-xl bg-background hover:bg-black active:scale-95 text-white font-bold text-sm flex items-center justify-center gap-2.5 transition-all shadow-lg text-center cursor-pointer group"
+                className="px-8 py-4 rounded-xl bg-background hover:bg-black active:scale-95 text-white font-bold text-sm flex items-center justify-center gap-2.5 transition-all shadow-lg text-center cursor-pointer group"
               >
                 <span>立即下载领赠金</span>
-                <ExternalLink class="w-4 h-4 group-hover:translate-x-0.5 transition-transform text-primary-400" />
+                <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 transition-transform text-primary-400" />
               </a>
 
-              <span class="text-[11px] text-primary-100 font-medium text-center">
+              <span className="text-[11px] text-primary-100 font-medium text-center">
                 ⭐ 穿越周期 · 稳健传承
               </span>
 
