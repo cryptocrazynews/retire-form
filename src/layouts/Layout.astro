@@ -1,0 +1,47 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { 
+  title, 
+  description = "你以為 65 歲能順利退休，但你知道自己的戶頭還差幾千萬嗎？30秒、7道毒舌又犀利的靈魂拷問，精準診斷你的真實退休缺口與專屬財務續命指南！" 
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="zh-TW" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏖️</text></svg>" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/og-image.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content="/og-image.jpg" />
+
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-primary-500 selection:text-white flex flex-col antialiased relative overflow-x-hidden">
+    <!-- Background dynamic mesh / gradients -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none -z-10">
+      <div class="absolute -top-[40%] left-[20%] w-[60rem] h-[60rem] bg-primary-600/10 rounded-full blur-3xl animate-pulse-slow"></div>
+      <div class="absolute top-[60%] -left-[10%] w-[50rem] h-[50rem] bg-blue-600/10 rounded-full blur-3xl"></div>
+      <div class="absolute top-[30%] right-[0%] w-[40rem] h-[40rem] bg-amber-500/10 rounded-full blur-3xl"></div>
+      <div class="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-20"></div>
+    </div>
+
+    <slot />
+  </body>
+</html>
